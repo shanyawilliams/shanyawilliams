@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="libs/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>Hello, world!</title>
+</head>
+
+<body class="everything">
+  <main role="main">
+    <div class="container">
+      <div id="game-start" class="row">
+        <div class="col">
+          <h1 class="title">Your Way Through the Jungle</h1>
+          <p class="title"> This is the start, please insert your name and click start</p>
+          <div class="input-group mb-3">
+            <input id="name-input" type="text" class="form-control" placeholder="Your Name">
+            <div class="input-group-append">
+              <button class="btn btn-primary" onclick="startGame()">START</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- passage 1 -->
+      <div id="passage-1" class="row" hidden>
+        <div class="col">
+          <p>Hi <span class="player-name" id="user-name"><span> to survive you only have two options </p>
+          <p class="options">This is a very difficult game. Your mission is to find the chess and recover the jewel that is inside. The point of this game is for you to use your intuition and make wise decisions. Do you wish to have FOOD, WATER, or SHELTER first?</p>
+          <p><a href="#" id="option-food" class="options" onclick="clickFunction(id)">FOOD</a> and <a href="#" id="option-2" class="options" onclick="clickFunction(id)">SHELTER</a> and <a href="#" id="option-3" class="options" onclick="clickFunction(id)">WATER</a></p>
+        </div>
+      </div>
+
+      <!-- passage 2 FOOD-->
+      <div id="passage-2" class="row" hidden>
+        <div class="col">
+          <p>You're Dead</p>
+
+          <p><a href="#" onclick="location.reload()">Restart</a></p>
+        </div>
+      </div>
+
+      <!-- passage3 SHELTER-->
+      <div id="passage-3" class="row" hidden>
+        <div class="col">
+          <p class="title">
+            You have made a decision of finding SHELTER. Now you must decide if you want a tree house or a house on the ground.
+          </p>
+          <p><a href="#" id="option-6" class="options" onclick="clickFunction(id)">TREE HOUSE</a> and <a href="#" id="option-7" class="options" onclick="clickFunction(id)">GROUND</a></p>
+        </div>
+      </div>
+      <!-- passage4 WATER -->
+      <div id="passage-4" class="row" hidden>
+        <div class="col">
+          <p class="title">
+            You have made a decision of finding WATER. Now you must decide if you want water from the river or water from a cocunut.
+          </p>
+        </div>
+      </div>
+      <!-- passage5 cocunut -->
+      <div id="passage-5" class="row" hidden>
+        <div class="col">
+          <p class="title">
+            You have made a decision of cocunut. Now you must decide if you want to climb the tree or wait until one falls down.</p>
+          <p><a href="#" id="option-6" class="options" onclick="clickFunction(id)">CLIMB</a> and <a href="#" id="option-7" class="options" onclick="clickFunction(id)">WAIT</a>
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="error-msg-box" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">ERROR BOX</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div id="error-msg" class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="libs/jquery-3.3.1.min.js"></script>
+  <script src="libs/popper.min.js"></script>
+  <script src="libs/bootstrap.min.js"></script>
+  <script src="scripts.js"></script>
+
+</body>
+
+</html>
